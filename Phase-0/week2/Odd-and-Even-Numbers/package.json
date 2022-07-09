@@ -1,0 +1,14 @@
+{
+  "name": "06",
+  "version": "1.0.0",
+  "description": "- Mengerti cara menggunakan while/ for\r - Mengerti cara menggunakan modulus operator\r ## Directions\r Pada tugas ini kamu diminta untuk melakukan looping dalam javascript untuk mengecek apakah sebuah bilangan merupakan bilangan genap atau ganjil dan mengecek apakah sebuah bilangan habis dibagi bilangan x atau tidak.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}

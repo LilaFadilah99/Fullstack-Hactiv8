@@ -1,0 +1,22 @@
+{
+  "name": "03",
+  "version": "1.0.0",
+  "description": "Mengerti Cara Menggunakan `If-Else`\r Mengerti Logika `If-Else`\r Mengerti Cara Menggunakan Operator Evaluasi `===`, `!==`\r ## Directions\r Buatlah algoritma dan implementasi di javascript untuk kasus berikut: Seorang pengajar sedang memeriksa ujian mahasiswa dan akan memberikan desc nilai dari A-E dengan ketentuan sebagai berikut:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      "hacktiv8-reporter"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "hacktiv8-reporter": "^1.1.3",
+    "hacktiv8-restriction": "^1.0.7"
+  }
+}

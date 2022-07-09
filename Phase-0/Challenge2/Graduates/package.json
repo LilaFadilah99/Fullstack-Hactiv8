@@ -1,0 +1,22 @@
+{
+  "name": "04",
+  "version": "1.0.0",
+  "description": "Mengerti Cara Menggunakan `If-Else`\r Mengerti Logika `If-Else`\r Mengerti Cara Menggunakan Operator Evaluasi `===`, `!==`\r ## Directions\r Diberikan 3 variable yang me-representasikan seorang murid:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      "hacktiv8-reporter"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "hacktiv8-reporter": "^1.1.3",
+    "hacktiv8-restriction": "^1.0.7"
+  }
+}
