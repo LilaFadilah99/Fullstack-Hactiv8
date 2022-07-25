@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+<div class="container">
+  <div class="container-fluid">
+    <h1>Book List</h1>
+    <% if (bookData === true) {%>
+    <a href="/books/add"><button type="button" class="btn btn-success">Add Book</button></a>
+    <a href="/books/emptyList"><button type="button" class="btn btn-warning">Empty Book</button></a>
+    <br /><br />
+    <!-- Search -->
+    <form class="d-flex" role="search" action="/books" method="get">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="title" />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <!-- Search -->
+    <% } %>
+    <br /><br />
+    <!-- Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Title</th>
+          <th scope="col">ISBN</th>
+          <% if (bookData === true) {%>
+
+          <th scope="col">Stock</th>
+          <% } %>
+          <th scope="col">Price</th>
+          <th scope="col">Author</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% books.map((el, index) =>{%>
+        <tr>
+          <td><%= index +1 %></td>
+          <td><%= el.title %></td>
+          <td><%= el.isbn %></td>
+          <% if (bookData === true) {%>
+          <td><%= el.stock %></td>
+          <% } %>
+          <td><%= el.price %></td>
+          <td><%= el.Author.name %></td>
+          <td>
+            <% if (bookData === true) {%>
+            <a href="/books/buy/<%= el.id %>"><button type="button" class="btn btn-info">buy</button></a>
+            <% } else { %>
+            <a href="/books/restock/<%= el.id %>"><button type="button" class="btn btn-info">Restock</button></a>
+            <a href="/books/delete/<%= el.id %>"><button type="button" class="btn btn-info">Delete</button></a>
+            <% } %>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <!-- End Table -->
+  </div>
+</div>
+<%- include('partials/footer') %>

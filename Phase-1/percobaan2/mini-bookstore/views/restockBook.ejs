@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<div class="container my-5">
+  <div class="container-fluid">
+    <div class="row">
+      <% for (const key of book) {%>
+      <h1>Restock Book</h1>
+      <h2><%= key.title %></h2>
+      <h2><%= key.Author.name %></h2>
+      <div class="col-6">
+        <!-- Form -->
+        <form action="/books/restock/<%= key.id %>" method="post">
+          <div class="mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" class="form-control" id="stock" name="stock" />
+          </div>
+          <a href=""><button type="submit" class="btn btn-success">Restock</button></a>
+        </form>
+        <% } %>
+        <!-- End Form -->
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') %>
